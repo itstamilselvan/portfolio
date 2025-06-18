@@ -1,0 +1,226 @@
+1. link unicons
+   - go to https://iconscout.com/unicons , copy a link tag and paste it.
+   
+2.link favicon.
+  - A favicon, short for "favorite icon", is a small image that represents a website or web page in a browser:
+  - image/x-icon is the standard type for .ico files (the format commonly used for favicons).
+  -     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+  - this link create icon in tab.
+  
+3. now add font in css file.
+   - go to google font , search regular 400 -> get link -> click import -> copy a style link
+   - now add into css file in header.
+
+4.add main.js in html and scroll reveal link for animation in scrollreveal website-> guide and copy a link.
+
+5.and add typed js link, search google typed js and get into first link github and scroll in cdn section
+  copy the <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script> this link and paste it html page.
+
+6.<div class="nav-button">
+            <button class="btn">Download cv <i class="uil uil-file-alt"></i></button>
+        </div>
+        <div class="nav-menu-btn"><i class="uil uil-bars" onclick="myMenuFunction()"></i></div>
+     </nav>
+
+   - take all <i> tags in https://iconscout.com/unicons/free-line-icons, just by first <i> name is file-alt
+   - second <i> tag is bars    
+   
+7. :root{
+    --body-color: rgb(250, 250, 250);
+	--color-white: rgb(255, 255, 255);
+
+	--text-color-second: rgb(68, 68, 68);
+	--text-color-third: rgb(30, 159, 171);
+
+	--first-color: rgb(110, 87, 224);
+	--first-color-hover: rgb(40, 91, 212);
+
+	--second-color: rgb(0, 201, 255);
+	--third-color: rgb(192, 166, 49);
+    --first-shadow-color: rgba(0, 0, 0, 0.1);
+
+}
+
+
+   -  CSS root pseudo-class declaration that defines custom properties (also called CSS variables), used across a web page or application.
+   - -- body-color: Defines the main background color for the page, a light off-white shade.
+     --color-white: A pure white color, useful for elements like text or backgrounds.  
+     --text-color-second: A medium-dark gray for secondary text.
+     --text-color-third: A teal color for tertiary or highlighted text.
+     --first-color: A violet shade, likely used for primary buttons or highlights.
+     --first-color-hover: A darker blue-violet shade for hover states on primary elements.
+     --second-color: A bright cyan, used for secondary accents.
+     --third-color: A golden-yellow, for tertiary accents.
+     --first-shadow-color: A subtle black shadow with low opacity for depth effects.
+	 
+	 
+8.scroll-behavior: smooth;  -  any scrolling action within the document—triggered by links, buttons, or JavaScript 
+                              (like scrollIntoView() or window.scrollTo)—will be smooth and gradual, rather than instant.	 
+							  
+9.::-webkit-scrollbar{
+	width: 10px;
+	border-radius: 25px;
+}
+
+::-webkit-scrollbar-track{
+	background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb{
+	background: #ccc;
+	border-radius: 30px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+	background: #bbb;
+}
+
+       -: :-webkit-scrollbar:
+
+* Targets the scrollbar container itself.
+* width: 10px;: Sets the width of the scrollbar to 10 pixels.
+* border-radius: 25px;: Rounds the scrollbar's edges for a smoother look.
+
+       - ::-webkit-scrollbar-track:
+
+* Targets the track area where the scrollbar thumb slides.
+* background: #f1f1f1;: Sets a light gray background for the track.
+
+      -  ::-webkit-scrollbar-thumb:
+
+* Targets the draggable thumb (the part you interact with).
+* background: #ccc;: Sets the thumb's background color to a medium gray.
+* border-radius: 30px;: Rounds the edges for a modern aesthetic.
+
+       -  ::-webkit-scrollbar-thumb:hover:
+
+* Specifies the hover state for the thumb.
+* background: #bbb;: Changes the thumb color to a slightly darker gray when hovered.							  
+	
+    - Notes: 
+           - This styling is useful for modernizing and customizing scrollbars
+           -  These styles only affect webkit-based browsers.		   
+
+10. 	width: 100%;
+	    position: relative;
+		
+		-- width: 100%; and position: relative; are commonly used in layout design.
+		
+		- width: 100%;
+		       * the parent element's width).
+			   * Commonly used for responsive designs to make elements adapt to the width of their parent.
+			   
+		- position: relative;
+               * Positions the element relative to its normal position in the document flow.
+               * The element remains in the flow, and other elements are not affected by this positioning.
+               * Allows for fine adjustments using the top, right, bottom, or left properties.		
+
+
+11.    padding-inline : 9vw;
+
+    * The padding-inline CSS property sets the padding on the inline (left and right) edges of an element. 
+    * Using a value like 9vw (viewport width) means the padding will be 9% of the width of the viewport on both the left and right sides.
+	
+12.  z-index : 100;
+
+     *  The z-index only affects elements that are positioned (relative, absolute, fixed, or sticky).
+     	 If an element is not positioned, z-index will have no effect.	
+		 
+13. function myMenuFunction(){
+    var menuBtn = document.getElementById("myNavMenu")
+
+    if(menuBtn.className === "nav-menu")
+     
+	 -- the id "myNavMenu" and the class " nav-menu" are in the same div tag
+	 -- example:  <div class="nav-menu" id="myNavMenu">
+	 
+14. @media only screen and (max-width: 900px)
+    {
+	.nav-button{
+		display: none;
+	}
+    }	 
+	
+	-- when your adjust your screen maximum 900px the download cv button will disappear.
+	-- just try with inspect.
+
+15. backdrop-filter: blur(20px);
+
+    -- The CSS backdrop-filter property applies graphical effects such as blurring or color shifting to the area behind an element.
+    -- The blur(20px) function applies a Gaussian blur to the backdrop.	
+
+16. .wrapper{
+	height: 150vh;
+}	
+
+     -- if you give value 100vh, scroll bar will not visible	
+	
+17. 	.nav-menu.responsive{
+		left: 0;
+
+	}
+
+        --- already the menu are in left: 100%; when you give this code , and by clicking the icon bar all menus come center.
+
+18. window.onscroll = function()
+{
+  headerShadow()
+};
+
+function headerShadow() {
+  const navHeader = document.getElementById("header");
+
+  if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50)
+  {
+    navHeader.style.boxShadow = " 0 1px 6px rgba(0, 0, 0, 0.1)";
+    navHeader.style.height = "70px";
+    navHeader.style.lineHeight = "70px";
+  }
+  else{
+    navHeader.style.boxShadow = "none";
+    navHeader.style.height = "90px";
+    navHeader.style.lineHeight = "90px";
+  }
+}
+
+      -- window.onscroll: An event listener that triggers the headerShadow function whenever the user scrolls the page.
+      --  when you scroll 50 px down you see shadow under the menu line.
+	  -- and also you see the height of menu will reduce to 70px (when you scroll 50 px down)
+		 
+19.    <div class="featured-text-btn">
+                    <button class="btn blue-btn">Hire Me</button>
+                    <button class="btn blue-btn">Download CV <i class="uil uil-file-alt"></i></button>
+
+       -- 	<i class="uil uil-file-alt">  - get this from iconsout website from unicons . name is " file-alt".
+
+20.   <div class="social_icons">
+                    <div class="icon"><i class="uil uil-instagram"></i></div>
+                    <div class="icon"><i class="uil uil-linkedin-alt"></i></div>
+                    <div class="icon"><i class="uil uil-dribbble"></i></div>
+                    <div class="icon"><i class="uil uil-github-alt"></i></div>
+                </div>
+
+       -- add this icons , dribble we not use just check remove the dribble and how it look.
+
+21. .wrapper{
+	padding: 10vw;
+}
+
+   -- here you give wrapper class padding has 10 viewport width , also you give instead of 100px.
+   --  if you not give this your name, and your info are not visible.
+
+22. main tag :
+              -- The <main> tag in HTML is used to represent the dominant content of the <body> of a document.
+              -- you should give padding for main tag. otherwise content will not show.
+
+23. postion: relative vs position : absolute;
+ 
+24. height vs min-height
+
+25. section tag
+
+26. align items vs align content		
+
+27. gap vs padding vs margin
+
+	  
